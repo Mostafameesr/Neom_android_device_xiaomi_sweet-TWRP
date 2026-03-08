@@ -56,6 +56,47 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_MAINTAINER_PATCH_VERSION="1"
 	export OF_MAINTAINER="MOSTAFAMEESR"
 
+		# ==========================================
+	# Modern Features (Android 12/13/14 Support)
+	# ==========================================
+
+	# 1. Screen Settings (To prevent GUI or touch glitches)
+	export OF_SCREEN_H="2400"
+	export OF_SCREEN_W="1080"
+
+	# 2. Modern Decryption Support (FBEv2 / Metadata)
+	# Crucial for reading internal storage correctly on modern ROMs
+	export OF_FBE_METADATA_MOUNT_IGNORE="1"
+	export OF_IGNORE_LOGICAL_MOUNT_ERRORS="1"
+	# Save OrangeFox settings in a safe path away from encryption complexities
+	export FOX_USE_DATA_RECOVERY_FOR_SETTINGS="1" 
+
+	# 3. EROFS File System Support
+	# Essential for flashing and mounting system on Android 13/14 ROMs
+	export OF_ENABLE_FSCOMPRESSION="1"
+
+	# 4. Boot & Magisk Patching Handling
+	export OF_USE_MAGISKBOOT="1"
+	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
+	export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
+
+	# 5. Build Environment Fixes (For fox_12.1 branch)
+	export FOX_REMOVE_AAPT="1"
+
+	# ==========================================
+	# MIUI & HyperOS Support (OTA & Compatibility)
+	# ==========================================
+
+	# Enable support for official MIUI/HyperOS OTA updates
+	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES="1"
+	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
+	export OF_DISABLE_MIUI_OTA_BY_DEFAULT="0"
+
+	# Patching settings to prevent bootloops on MIUI/HyperOS
+	export OF_NO_MIUI_PATCH_WARNING="1"
+	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
+	
+
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
