@@ -18,6 +18,7 @@
 /cust		ext4    /dev/block/bootdevice/by-name/cust			flags=display="Cust"
 /cust_image	ext4    /dev/block/bootdevice/by-name/cust			flags=display="Cust";backup=1
 /misc		emmc    /dev/block/bootdevice/by-name/misc
+/frp		emmc    /dev/block/bootdevice/by-name/frp			flags=display="FRP";backup=1;wipeingui
 /modem		emmc    /dev/block/bootdevice/by-name/modem			flags=backup=1;display="Modem"
 /bluetooth	emmc    /dev/block/bootdevice/by-name/bluetooth		flags=backup=1;subpartitionof=/modem
 /dsp		emmc    /dev/block/bootdevice/by-name/dsp			flags=backup=1;subpartitionof=/modem
