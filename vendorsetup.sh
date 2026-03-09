@@ -37,9 +37,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
 
-    # KernelSU-Next / SukiSu support
-    export FOX_ENABLE_KERNELSU_NEXT_SUPPORT=1
-    export FOX_ENABLE_SUKISU_SUPPORT=1
+    # FRP_Test
+	export OF_ENABLE_FRP_ADDON="1"
 
 	# R12.1 Settings
 	export FOX_MAINTAINER_PATCH_VERSION="1"
