@@ -1,21 +1,6 @@
-#
-#	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2021-2024 The OrangeFox Recovery Project
-#
-#	OrangeFox is free software: you can redistribute it and/or modify
-#	it under the terms of the GNU General Public License as published by
-#	the Free Software Foundation, either version 3 of the License, or
-#	any later version.
-#
-#	OrangeFox is distributed in the hope that it will be useful,
-#	but WITHOUT ANY WARRANTY; without even the implied warranty of
-#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#	GNU General Public License for more details.
-#
-# 	This software is released under GPL version 3 or any later version.
-#	See <http://www.gnu.org/licenses/>.
-#
-# 	Please maintain this if you use this script or any part of it
+# Copyright (C) 2025-2026 OrangeFox Recovery Project
+# Copyright (C) 2026 chickendrop89
+# SPDX-License-Identifier: GPL-3.0-only
 #
 FDEVICE="sweet"
 
@@ -51,6 +36,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
+
+    # KernelSU-Next / SukiSu support
+    export FOX_ENABLE_KERNELSU_NEXT_SUPPORT=1
+    export FOX_ENABLE_SUKISU_SUPPORT=1
 
 	# R12.1 Settings
 	export FOX_MAINTAINER_PATCH_VERSION="1"
