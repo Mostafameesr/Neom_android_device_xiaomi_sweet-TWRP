@@ -16,7 +16,8 @@
 /firmware	vfat    /dev/block/bootdevice/by-name/modem			flags=display="Firmware"
 /firmware_image emmc    /dev/block/bootdevice/by-name/modem			flags=display="Firmware";backup=1
 /cust		ext4    /dev/block/bootdevice/by-name/cust			flags=display="Cust"
-/cust_image	ext4    /dev/block/bootdevice/by-name/cust			flags=display="Cust";backup=1
+/cust		erofs   /dev/block/bootdevice/by-name/cust			flags=display="Cust"
+/cust_image	emmc    /dev/block/bootdevice/by-name/cust			flags=display="Cust Image";backup=1;flashimg=1
 /misc		emmc    /dev/block/bootdevice/by-name/misc
 /frp		emmc    /dev/block/bootdevice/by-name/frp			flags=display="FRP";backup=1;wipeingui
 /modem		emmc    /dev/block/bootdevice/by-name/modem			flags=backup=1;display="Modem"
