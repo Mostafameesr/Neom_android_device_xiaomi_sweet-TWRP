@@ -107,6 +107,11 @@ TW_INCLUDE_PYTHON := true
 TW_INCLUDE_LOGICAL := true # Helps with Dynamic Partitions UI
 TW_NO_BIND_SYSTEM := true # Prevents mount issues on modern Android
 
+# EROFS Support
+BOARD_EROFS_COMPRESSOR := lz4hc
+BOARD_EROFS_PCLUSTER_SIZE := 4096
+TARGET_USERIMAGES_USE_EROFS := true
+
 # Crypto & Decryption
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
