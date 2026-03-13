@@ -110,7 +110,15 @@ TW_NO_BIND_SYSTEM := true # Prevents mount issues on modern Android
 # EROFS Support
 BOARD_EROFS_COMPRESSOR := lz4hc
 BOARD_EROFS_PCLUSTER_SIZE := 4096
-TARGET_USERIMAGES_USE_EROFS := true
+
+#Neom_mostafameesr
+TW_INCLUDE_FASTBOOTD := true
+TW_INCLUDE_REPACKTOOLS := true
+TARGET_USES_MKE2FS := true
+TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_FUSE_EXFAT := true
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
+TW_HAS_FLASHLIGHT := true
 
 # Crypto & Decryption
 TW_INCLUDE_CRYPTO := true
