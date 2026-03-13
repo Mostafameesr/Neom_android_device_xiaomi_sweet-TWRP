@@ -32,3 +32,15 @@
 # Removable storage
 /sdcard1	vfat    /dev/block/mmcblk0p1  		/dev/block/mmcblk0	flags=display="MicroSD Card";storage;wipeingui;removable
 /usb_otg	vfat    /dev/block/sdg1                 /dev/block/sdg		flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
+
+# Logical Partitions (Smart Dual-Support EXT4 & EROFS)
+/system         ext4    system      flags=display="System";logical
+/system         erofs   system      flags=display="System";logical
+/system_ext     ext4    system_ext  flags=display="System_Ext";logical
+/system_ext     erofs   system_ext  flags=display="System_Ext";logical
+/vendor         ext4    vendor      flags=display="Vendor";logical
+/vendor         erofs   vendor      flags=display="Vendor";logical
+/product        ext4    product     flags=display="Product";logical
+/product        erofs   product     flags=display="Product";logical
+/odm            ext4    odm         flags=display="ODM";logical
+/odm            erofs   odm         flags=display="ODM";logical
