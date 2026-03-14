@@ -71,6 +71,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# 5. Build Environment Fixes (For fox_12.1 branch)
 	export FOX_REMOVE_AAPT="1"
 
+	#Timeout
+	export OF_SCREEN_TIMEOUT="0"
+
 	# ==========================================
 	# MIUI & HyperOS Support (OTA & Compatibility)
 	# ==========================================
