@@ -119,10 +119,6 @@ TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_HAS_FLASHLIGHT := true
 
-# Haptics & Vibration
-TW_SUPPORT_INPUT_1_2_HAPTICS := true
-TW_VIBRATOR_PATH := /sys/class/leds/vibrator/activate
-
 # Fix Screen Off Freezing & UI Glitches
 TW_NO_SCREEN_BLANK := true
 TW_NO_SCREEN_TIMEOUT := true
