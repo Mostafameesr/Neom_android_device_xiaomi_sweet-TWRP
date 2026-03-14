@@ -120,6 +120,10 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
 TW_HAS_FLASHLIGHT := true
 
+# Fix Screen Off Freezing & UI Glitches
+TW_NO_SCREEN_BLANK := true
+TW_NO_SCREEN_TIMEOUT := true
+
 # Crypto & Decryption
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
