@@ -21,13 +21,13 @@
 
 ---
 ## Kernel sources
-"https://github.com/vantoman/kernel_xiaomi_sm6150.git"
+"https://github.com/Mostafameesr/Neom_kernel_xiaomi_sweet.git"
 
 ---
 ## Copyright notice
  ```
   /*
-  *  Copyright (C) 2022 The OrangeFox Recovery Project
+  *  Copyright (C) 2022-2026 The OrangeFox Recovery Project
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
