@@ -1,6 +1,21 @@
-# Copyright (C) 2025-2026 OrangeFox Recovery Project
-# Copyright (C) 2026 chickendrop89
-# SPDX-License-Identifier: GPL-3.0-only
+#
+This file is part of the OrangeFox Recovery Project
+# 	Copyright (C) 2021-2024 The OrangeFox Recovery Project
+#
+#	OrangeFox is free software: you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation, either version 3 of the License, or
+#	any later version.
+#
+#	OrangeFox is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#
+# 	This software is released under GPL version 3 or any later version.
+#	See <http://www.gnu.org/licenses/>.
+#
+# 	Please maintain this if you use this script or any part of it
 #
 FDEVICE="sweet"
 
@@ -38,13 +53,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     # FRP_Test
 	export OF_ENABLE_FRP_ADDON="1"
 
-	# R12.1 Settings
+	# Settings
 	export FOX_MAINTAINER_PATCH_VERSION="1"
 	export OF_MAINTAINER="MOSTAFAMEESR"
 
-		# ==========================================
-	# Modern Features (Android 12/13/14 Support)
-	# ==========================================
+
 
 	# 1. Screen Settings (To prevent GUI or touch glitches)
 	export OF_SCREEN_H="2400"
@@ -65,12 +78,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# 5. Build Environment Fixes (For fox_12.1 branch)
 	export FOX_REMOVE_AAPT="1"
 
-	#Timeout
-	export OF_SCREEN_TIMEOUT="0"
 
-	# ==========================================
-	# MIUI & HyperOS Support (OTA & Compatibility)
-	# ==========================================
 
 	# Enable support for official MIUI/HyperOS OTA updates
 	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES="1"
